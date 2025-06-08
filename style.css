@@ -1,163 +1,162 @@
-:root{
-    --black: #012030;
-    --green:#45C4B0;
-    --blue:#13678A;
+:root {
+  --black: #012030;
+  --green: #45c4b0;
+  --blue: #13678a;
 }
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-body{
-    font-family: "DynaPuff", system-ui;
-    background-color: var(--black);
-    color: var(--green);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    width: 100%;
-    height: 100vh;
+body {
+  font-family: "DynaPuff", system-ui;
+  background-color: var(--black);
+  color: var(--green);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100vh;
 }
-.headingContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.headingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-.heading{
-    font-weight: 900;
-    font-size: 60px;
-    padding: 20px;
+.heading {
+  font-weight: 900;
+  font-size: 60px;
+  padding: 20px;
 }
-.turnContainer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 80px;
-    padding: 20px;
+.turnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 20px;
 }
-.turnIndicator{
-    font-size: 30px;
-    font-weight: 600;
+.turnIndicator {
+  font-size: 30px;
+  font-weight: 600;
 }
-.resetButton{
-    border: none;
-    background-color: var(--green);
-    color: var(--black);
-    padding: 8px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 10px;
+.resetButton {
+  border: none;
+  background-color: var(--green);
+  color: var(--black);
+  padding: 8px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
 }
-.resetButton:hover{
-    cursor: pointer;
-    opacity: 0.8;
+.resetButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
-.gameContainer{
-    display: grid;
-    align-items: center;
-    justify-content: center;
+.gameContainer {
+  display: grid;
+  align-items: center;
+  justify-content: center;
 }
-.gameBoard{
-    display: grid;
-    grid-template-areas: 
-        "cell1 cell2 cell3"
-        "cell4 cell5 cell6"
-        "cell7 cell8 cell9"
-    ;
+.gameBoard {
+  display: grid;
+  grid-template-areas:
+    "cell1 cell2 cell3"
+    "cell4 cell5 cell6"
+    "cell7 cell8 cell9";
 }
-.cell{
-    width: 120px;
-    height: 120px;
-    border: 5px solid var(--green);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 90px;
+.cell {
+  width: 120px;
+  height: 120px;
+  border: 5px solid var(--green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 90px;
 }
-.cell:hover{
-    cursor: pointer;
-    background-color: var(--blue);
-    transition: 0.3s ease-in-out;
+.cell:hover {
+  cursor: pointer;
+  background-color: var(--blue);
+  transition: 0.3s ease-in-out;
 }
-#cell1{
-    grid-area: cell1;
+#cell1 {
+  grid-area: cell1;
 }
-#cell2{
-    grid-area: cell2;
+#cell2 {
+  grid-area: cell2;
 }
-#cell3{
-    grid-area: cell3;
+#cell3 {
+  grid-area: cell3;
 }
-#cell4{
-    grid-area: cell4;
+#cell4 {
+  grid-area: cell4;
 }
-#cell5{
-    grid-area: cell5;
+#cell5 {
+  grid-area: cell5;
 }
-#cell6{
-    grid-area: cell6;
+#cell6 {
+  grid-area: cell6;
 }
-#cell7{
-    grid-area: cell7;
+#cell7 {
+  grid-area: cell7;
 }
-#cell8{
-    grid-area: cell8;
+#cell8 {
+  grid-area: cell8;
 }
-#cell9{
-    grid-area: cell9;
+#cell9 {
+  grid-area: cell9;
 }
-.top{
-    border-top: none;
+.top {
+  border-top: none;
 }
-.bottom{
-    border-bottom: none;
+.bottom {
+  border-bottom: none;
 }
-.left{
-    border-left: none;
+.left {
+  border-left: none;
 }
-.right{
-    border-right: none;
+.right {
+  border-right: none;
 }
-.resultContainer{
-    z-index: 1000;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
+.resultContainer {
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
-.resultBanner{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-direction: column;
-    background-color: var(--blue);
-    width: 400px;
-    height: 200px;
-    border-radius: 20px;
+.resultBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: var(--blue);
+  width: 400px;
+  height: 200px;
+  border-radius: 20px;
 }
-.result{
-    font-size: 40px;
-    font-weight: 600;
-    padding: 20px;
-    color: var(--black);
+.result {
+  font-size: 40px;
+  font-weight: 600;
+  padding: 20px;
+  color: var(--black);
 }
-.playAgainButton{
-    border: none;
-    background-color: var(--black);
-    color: var(--blue);
-    padding: 10px;
-    font-size: 20px;
-    font-weight: 600;
-    border-radius: 10px;
-    z-index: 1000;
+.playAgainButton {
+  border: none;
+  background-color: var(--black);
+  color: var(--blue);
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 10px;
+  z-index: 1000;
 }
-.playAgainButton:hover{
-    cursor: pointer;
-    opacity: 0.8;
+.playAgainButton:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
